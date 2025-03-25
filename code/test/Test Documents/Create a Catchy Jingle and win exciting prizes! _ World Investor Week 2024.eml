@@ -1,0 +1,203 @@
+Delivered-To: bharathmuralidharan0390@gmail.com
+Received: by 2002:a05:7000:1753:b0:5b9:7d42:4f28 with SMTP id c19csp177896maw;
+        Tue, 8 Oct 2024 05:17:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF5hnfZfNIjj8kaEQCIZ7nA2k28QEBXPDCnEV7YVQUOZ73dkZtq8IvTfpJI62lyyTSDbBvI
+X-Received: by 2002:a17:902:f54e:b0:20b:7ece:322c with SMTP id d9443c01a7336-20bfea56508mr186119195ad.29.1728389841497;
+        Tue, 08 Oct 2024 05:17:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1728389841; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lFZm7Rk9eU7J1ZD6DBG9a8x/yqVvXC/W+sdKJvUEugxD4SBrbzzz99N6/JE3ZF7gXJ
+         kcxOcsl17pVW3xvEh4AyJDmq5uf5fb3zPNVSJjxipNrZKnWkGfOkC+iXERyaAQ0gIXB/
+         kTNR2kOs1BRQyB0fdh6sm+2UzlvXbH5W5ziT7+N2SPN+iFhyl1PZ/YMVHrsA+I54nQ57
+         src/3m/xGdPjLQl1T5pebvQzbN0g69HeBosEmaHlX9MMveUUwAqIee+3B6N7arB0CBka
+         iwIWPLbGs/NlV1wozj3BbuwPp0TzPB7N1RNfL4hiccvahGZpG1DB9V8nkJtpq51tiJdE
+         SzRA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:message-id:subject:to:from:reply-to
+         :list-unsubscribe:precedence:dkim-signature:dkim-signature;
+        bh=Xw30IPT0TYoJ9Nv3AC/O3EFQsfFYpTiM2jAhNTOlNOI=;
+        fh=YXAv50I7J/6fVf7nDpUiC83rcbiNQWObTn3c+jPiDBU=;
+        b=QXqbtdyPTCDhg2VDB8g/weoIDm8NrWnFmlw0mfYLr4bz3ozbH6sN2iUKrrjI6m6dke
+         w45OxzzVSw+gGegC/PbYQEZoFjOhDNb1/QCikGeQ33HI1BwgqqYrBZZWZd4+T7gU5Ot+
+         w0z8UQBzQIAtHeaPjf17vH9S/cukx0MGA2UVbmzzgp/MynRsz0VVbFtd66rfQSmNPw+R
+         1Ut5xoCVorX+JSki1xFRzogTCIhuFwEWy5PZ0CWa48PGlaHGB1f4Hy58OWbGfx6p9QS9
+         /sLN3nwhIwT5Hmuit88sK057PNKtT8eVoJ60CzV1D3E5YFoVjbEcjNHXqTucxS8ICbZY
+         t0Eg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail2india.org header.s=s1 header.b=J1wyjgbw;
+       dkim=pass header.i=@bseindia.in header.s=sc2048 header.b=gnCxJg4k;
+       spf=pass (google.com: domain of b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in designates 45.249.55.49 as permitted sender) smtp.mailfrom="b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bseindia.in
+Return-Path: <b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in>
+Received: from sender49.sendclean.io (sender49.sendclean.io. [45.249.55.49])
+        by mx.google.com with ESMTPS id d9443c01a7336-20c13990c0bsi89564145ad.453.2024.10.08.05.17.20
+        for <bharathmuralidharan0390@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 08 Oct 2024 05:17:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in designates 45.249.55.49 as permitted sender) client-ip=45.249.55.49;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail2india.org header.s=s1 header.b=J1wyjgbw;
+       dkim=pass header.i=@bseindia.in header.s=sc2048 header.b=gnCxJg4k;
+       spf=pass (google.com: domain of b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in designates 45.249.55.49 as permitted sender) smtp.mailfrom="b-276803237-bharathmuralidharan0390=gmail.com@tracker.bseindia.in";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bseindia.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail2india.org;
+ q=dns/txt; s=s1; bh=Xw30IPT0TYoJ9Nv3AC/O3EFQsfFYpTiM2jAhNTOlNOI=;
+ h=from:reply-to:subject:to:mime-version:content-type:list-unsubscribe;
+ b=J1wyjgbwdWCoTtatKDUO8aM1EZkcVzNzgpbjU85yd2U8wSwf10miYDv1YdbcgxjviI3TMl64hfj4
+ gXJv+0DCzk7f+K+/vLNxC3avKV8kwQl2qUc3impjLzF9tMMukyVQtTU3SxOka+00s5DVkFqHo8cj
+ 0Z2+U0XdFyZiFuDvzbub2rRIdKWVux+zW1AfqXtFKbmQvqfzsJofnxzw0JcAvw2GkTCdYdc40YG2
+ Mby9vUC2vvr96TG8BZqnk0twsvhnZGHFUwh4tdVwgMyKYlT6EWxKFPQF7f8r9qcfKE8kfWmv06JG
+ tvColhil8ifyHiGIsc8fTe7aDS0ehNlf7EI3cw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=bseindia.in;
+ q=dns/txt; s=sc2048; bh=Xw30IPT0TYoJ9Nv3AC/O3EFQsfFYpTiM2jAhNTOlNOI=;
+ h=from:reply-to:subject:to:mime-version:content-type:list-unsubscribe;
+ b=gnCxJg4kO0Wj49FypxzEwItgjLIA68ZlZbZJKi6gHa/6QX9s/AxwGYHVDYT4yCVSVX9FauS+4
+ s/Lyw/2oKEEJg/73aZ71XZOIlL9PYiDzdQFSi1UNsum73RL7kbo5LPPEOjHc+ge0ATb8iom4ZTt
+ OquzuA0V0EwJzARwoFnU9O4tcC2JU2EXzZJHIz5Ai5yTFkz7llJGj079/HVnB/n4XkfxCqWEnyI
+ aXOULWJABLYKLRHeD8d2yEMEwGcwCNFxGxCZrkMfumHmVeK1rlq32/lI4Bws4JBlte40iYa4vv9
+ sbmlLsXQpFrhdQqvxj9COPRJBZl+PD+83qQU6w1yqT3Q==
+Content-Type: multipart/alternative; boundary="----sinikael-?=_1-329232677"
+X-Unique-Id:
+ 6f704109836ce7d232147ab8632d96fe7d8cb0c21f316fd01aae3bdea342ba1fedf9bf8bd340d341b6896b06541c2285939b217dd93678291105033631ad2debc87206fd36c250e0693f21c83bbfa9699487bf2aeafc9eaf5f29a4bd5af84b73dd791a49e09e8eae88dd8f0ea409996e6d082f4ffa4f9b7838590886891b611ddef4a53003cb3cfdb14695862ed2a8b8
+Precedence: bulk
+X-Feedback-Id:
+ 94595919:6704b69a5adafd95a08b458d.6704c2f8486ed307b18ccae5:app:mg
+List-Unsubscribe:
+ <unsubscribe-6704b69a5adafd95a08b458d-6704c2f8486ed307b18ccae5@tracker.bseindia.in?subject=unsubscribe>,<https://tracker.bseindia.in/report/unsubscribe/6704b69a5adafd95a08b458d/6704c2f8486ed307b18ccae5>
+Reply-To: mailers@bseindia.in
+From: BSE INVESTOR PROTECTION FUND <mailers@bseindia.in>
+To: bharathmuralidharan0390@gmail.com
+Subject: Create a Catchy Jingle and win exciting prizes! | World Investor
+ Week 2024
+Message-Id: <1728389836839-7bb8dd20-b4361c10-578bc839@bseindia.in>
+Date: Tue, 08 Oct 2024 12:17:16 +0000
+MIME-Version: 1.0
+X-Mta-Unique-Id: tqtktsts.tpqdnbkq--276803237-87D578DE-F808-4EB9-AC1D-27B45DEB9AE6.110.1
+Received: from (10.131.0.26) by sender43.sendclean.io id 87D578DE-F808-4EB9-AC1D-27B45DEB9AE6.110 for <bharathmuralidharan0390@gmail.com>; Tue, 08 Oct 2024 12:17:17 +0000 (envelope-from <b-276803237-bharathmuralidharan0390=gmail.com@alertsijon.in>)
+
+------sinikael-?=_1-329232677
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Sir/Madam,
+This World Investor Week (WIW) 2024 which will be celebrated during 14-20 =
+October 2024, BSE Investors=E2=80=99 Protection Fund (IPF) is offering you =
+a chance to unleash your musical creativity! Enter our Jingle Making =
+Competition and create a tune that captures the essence of topic:
+TOPIC : CYBER CRIMINALS SE SATARK RAHO=E2=80=A6SAMAZDARI SE INVEST KARO !
+Whether you=E2=80=99re a solo performer or a group, show us your musical =
+flair!
+How to Participate:
+Submit a jingle video (max 3 minutes) solo or with your team.
+The judging will focus on creativity, relevance, impact, and technical =
+quality.
+Exciting Prizes Await! Winners will receive rewards and be featured on =
+BSE=E2=80=99s social media!
+To enter, send your video with your full name, contact number, and city to =
+email id =E2=80=93 jinglewiw2024@gmail.com on or before October 20, 2024.
+Note: Plagiarized entries will be disqualified. By submitting, you grant =
+BSE permission to use your content. Only those entries which are submitted =
+through email will be considered, not on whatsapp.=20
+Join us in making investing fun and accessible! Ready to make your tune =
+resonate with the world?
+In case of any query please contact on 9302278582 / 9630825098
+Best regards,
+Team BSE IPF
+.
+------sinikael-?=_1-329232677
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<img alt=3D"" src=3D"http://img1.bseindia.in/images/bseindia/IPF_Mailers/08=
+102024/299242_img.jpg" style=3D"width: 1000px; height: 800px;" /><br />
+=C2=A0
+<p style=3D"margin:0cm"><span style=3D"font-size:11pt"><span =
+style=3D"font-family:Aptos,sans-serif"><b><span style=3D"font-size:12.=
+0pt"><span arial=3D"" style=3D"font-family:">Dear Sir/Madam,=
+</span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">This World Investor Week (WIW) 2024 which will be =
+celebrated during 14-20 October 2024, BSE Investors=E2=80=99 Protection =
+Fund (IPF) is offering you a chance to unleash your musical creativity! =
+Enter our Jingle Making Competition and create a tune that captures the =
+essence of topic:</span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:"><span style=3D"color:red">TOPIC : CYBER CRIMINALS SE=
+ SATARK RAHO=E2=80=A6SAMAZDARI SE INVEST KARO</span></span></span></b><b><s=
+pan style=3D"font-size:12.0pt"><span arial=3D"" style=3D"font-family:"> =
+<span style=3D"color:red">!</span></span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Whether you=E2=80=99re a solo performer or a group, =
+show us your musical flair!</span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">How to Participate:</span></span></b></span></span><=
+/p>
+
+<p style=3D"margin:0cm"></p>
+
+<ol>
+	<li style=3D"margin:0cm 0cm 0cm 36pt"><span style=3D"font-size:11pt"><span=
+ style=3D"font-family:Aptos,sans-serif"><b><span style=3D"font-size:12.=
+0pt"><span arial=3D"" style=3D"font-family:">Submit a jingle video (max 3 =
+minutes) solo or with your team.</span></span></b></span></span></li>
+	<li style=3D"margin:0cm 0cm 0cm 36pt"><span style=3D"font-size:11pt"><span=
+ style=3D"font-family:Aptos,sans-serif"><b><span style=3D"font-size:12.=
+0pt"><span arial=3D"" style=3D"font-family:">The judging will focus on =
+creativity, relevance, impact, and technical quality.=
+</span></span></b></span></span></li>
+</ol>
+
+<p style=3D"margin:0cm"><br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Exciting Prizes Await! Winners will receive rewards =
+and be featured on BSE=E2=80=99s social media!</span></span></b></span></sp=
+an><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">To enter, send your video with your full name, =
+contact number, and city to <span style=3D"color:red">email id =E2=80=93 <a=
+ href=3D"mailto:jinglewiw2024@gmail.com" style=3D"color:#467886; =
+text-decoration:underline">jinglewiw2024@gmail.com</a> on or before October=
+ 20, 2024.</span></span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Note: Plagiarized entries will be disqualified. By =
+submitting, you grant BSE permission to use your content. <span =
+style=3D"color:black">Only those entries which are submitted through email =
+will be considered, not on whatsapp. </span></span></span></b></span></span=
+><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Join us in making investing fun and accessible! =
+Ready to make your tune resonate with the world?</span></span></b></span></=
+span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">In case of any query please contact on 9302278582 / =
+9630825098</span></span></b></span></span><br />
+<br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Best regards,</span></span></b></span></span><br />
+<span style=3D"font-size:11pt"><span style=3D"font-family:Aptos,=
+sans-serif"><b><span style=3D"font-size:12.0pt"><span arial=3D"" =
+style=3D"font-family:">Team BSE IPF</span></span></b></span></span></p><tab=
+le cellspacing=3D"0" cellspacing=3D"0" align=3D"center"><tr><td><img =
+src=3D"https://tracker.bseindia.in/image/open/6704b69a5adafd95a08b458d/6704=
+c2f8486ed307b18ccae5.png" width=3D"400" height=3D"1" =
+alt=3D"o"></td></tr></table>
+------sinikael-?=_1-329232677--

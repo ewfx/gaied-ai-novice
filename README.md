@@ -10,7 +10,7 @@
 - [How to Run](#how-to-run)
 - [Tech Stack](#tech-stack)
 - [Team](#team)
-
+- Check the github access
 ---
 
 ## 🎯 Introduction
